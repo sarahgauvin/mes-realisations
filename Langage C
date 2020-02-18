@@ -1,0 +1,135 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+// Dans le type Abonnement (une �num�ration) d�clar� ci-dessous,
+// d�clarer chaque abonnement propos� : First, Gold, Diamond, Business
+typedef enum {FIRST, GOLD, DIAMOND, BUSINESS} Abonnement;
+
+// Dans le type Client (une structure) d�clar� ci-dessous, placer :
+// - l'identifiant du client
+// - l'abonnement choisi par le client : First, Gold, Diamond, Business
+// - le prix de l'abonnement
+// - le nombre de mois d'anciennet�
+typedef struct
+{
+    int identifiant;
+    Abonnement abonnement;
+    int prix ;
+    int ancien;
+} Client;
+
+
+
+// Exercice 1 : fonction afficherClient
+void ficheclient(Client c)
+{
+printf("L'identifant client est : %d \n", c.identifiant);
+printf(" son abonnement est  : %d \n", c.abonnement);
+printf("son prix est  : %d \n", c.prix);
+printf("Son ancienn�t est : %d mois \n", c.ancien);
+}
+
+
+// Exercice 2 : fonction calculerPrix
+
+int prixabonnement(Client c)
+{
+    int prixx;
+    if ( c.abonnement > 60)
+    {
+         switch(c.abonnement)
+        {
+            case FIRST : prixx = 10 + 5 - (c.ancien-60)/12; break;
+            case GOLD : prixx = 10 + 10 - ((c.ancien-60)/12) *2; break;
+            case DIAMOND : prixx = 10 + 15 - ((c.ancien-60)/12) *3; break;
+            case BUSINESS : prixx = 10 + 20 - ((c.ancien-60)/12) *4; break;
+            default: printf("ERREUR"); break;
+        }
+    }
+    else
+        {
+             switch(c.abonnement)
+        {
+            case FIRST : prixx = 10 + 5; break;
+            case GOLD : prixx = 10 + 10 ; break;
+            case DIAMOND : prixx =10 + 15 ; break;
+            case BUSINESS : prixx =10 + 20 ; break;
+            default: printf("ERREUR"); break;
+        }
+        }
+
+
+    return prixx;
+}
+// Exercice 3 : fonction changerAbonnement
+void modifiabo(Client* c)
+{
+    int new;
+    //Client sarah;
+    printf("Quel nouvelle abonnement souhaitez vous ?  \n");
+    scanf("%d",&new);
+    if (new == (*c).abonnement)
+    {
+        printf("Ce client a d�ja cet abonnement  \n");
+    }
+    else
+    {
+        c->abonnement= new; // c-> == (*c).
+        (*c).prix = prixabonnement(*c);
+        printf("Le nouveau prix est : %d   \n", (*c).prix);
+    }
+
+
+}
+
+ int Calculernbclient( int moisancien, Client *tab)
+ {
+     int nbdeclient=0, i;
+
+    for (i=0;i<20;i++)
+    {
+           if ( (tab[i].ancien*12) >= moisancien)
+            {
+                nbdeclient++ ;
+            }
+    }
+     return nbdeclient;
+ }
+// Votre code ici
+
+
+int main()
+{
+
+int moisancien, nbdeclient, i;
+Client tab[20];
+srand(time(NULL));
+ for (i=0;i<20;i++)
+    {
+         tab[i].identifiant = rand()%1000+1000;
+         tab[i].abonnement =  rand()%3+0;
+         tab[i].ancien = rand() %20+0;
+         tab[i].prix = prixabonnement(tab[i]);
+    }
+printf("quel est le nombre de mois ?");
+
+scanf("%d",&moisancien);
+
+nbdeclient = Calculernbclient(moisancien, tab);
+
+printf("le nombre de client ayant %d mois d'anciennet� est : %d \n", moisancien, nbdeclient);
+
+
+//Client* pointeur;
+Client sarah = {1502,3,56,89};
+//pointeur = &sarah;
+sarah.prix = prixabonnement(sarah);
+ficheclient(sarah);
+//modifiabo(*pointeur);
+//ficheclient(sarah);
+
+
+	return 0;
+}
