@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Incident">
+        <item>"sans incident"</item>
+        <item>"long feux"</item>
+        <item>"non feux"</item>
+    </string-array>
+
+    <string-array name="Qualite">
+        <item>"Nominale"</item>
+        <item>"Balistique"</item>
+        <item>"Torche"</item>
+    </string-array>
+
+</resources>

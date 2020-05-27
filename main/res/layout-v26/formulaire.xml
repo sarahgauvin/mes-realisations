@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.sarah.ihm.Formulaire">
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/btnQrCodee"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:backgroundTint="@color/red"
+    app:layout_anchorGravity="bottom|right|end"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:srcCompat="@drawable/qrcode" />
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/btnEnregistrer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_marginVertical="95dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:backgroundTint="@color/red"
+    app:layout_anchorGravity="bottom|right|end"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/btnQrCodee"
+    app:srcCompat="@drawable/sauvegarde" />
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/btnPhoto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|end"
+    android:layout_marginVertical="170dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:backgroundTint="@color/red"
+    app:layout_anchorGravity="bottom|right|end"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="@id/btnEnregistrer"
+    app:srcCompat="@drawable/photo" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-275dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/formulaire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="50dp"
+                    android:ellipsize="none"
+
+                    android:text="@string/formulaire"
+                    android:textSize="24sp"
+                    app:fontFamily="serif" />
+
+                <Button
+                    android:id="@+id/changerProjet"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="@string/projet"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nomDuProjet"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="1dp"
+                android:text="@string/nom_du_projet"
+
+                />
+
+            <EditText
+                android:id="@+id/ETnomDuProjet"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/nomDuPyrotechnicien"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/nom_du_pyrotechnicien" />
+
+
+            <EditText
+                android:id="@+id/ETnomDuPyrotechnicien"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/nomDuMaitreDoeuvre"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/nom_du_maitre_doeuvre" />
+
+            <EditText
+                android:id="@+id/ETnomDuMaitreDoeuvre"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/Propulseur1"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:ellipsize="none"
+
+                android:text="@string/propulseur1"
+                android:textSize="24sp"
+                app:fontFamily="serif" />
+
+            <TextView
+                android:id="@+id/ReferencePropulseur"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/reference_propulseur" />
+
+            <EditText
+                android:id="@+id/ETReferencePropulseur"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/typeDeCasing"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/type_de_casing" />
+
+            <EditText
+                android:id="@+id/ETtypeDeCasing"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/numeroId"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/numero_id" />
+
+            <EditText
+                android:id="@+id/ETnumeroId"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/ReferenceProgergol"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/nef_progergol" />
+
+            <EditText
+                android:id="@+id/ETReferenceProgergol"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/dateFabrication"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/date_De_Fabrication" />
+
+            <EditText
+                android:id="@+id/ETdateFabrication"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+
+            <TextView
+                android:id="@+id/nimeroIdCp"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/numero_id_chargepro" />
+
+            <EditText
+                android:id="@+id/ETnimeroIdCp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/masseMatiereActive"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/masse_de_matiere_active" />
+
+            <EditText
+                android:id="@+id/ETmasseMatiereActive"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/Propulseur2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:ellipsize="none"
+                android:text="@string/propulseur2"
+                android:textSize="24sp"
+                app:fontFamily="serif" />
+
+            <TextView
+                android:id="@+id/ReferencePropulseur2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/reference_propulseur" />
+
+            <EditText
+                android:id="@+id/ETReferencePropulseur2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/typeDeCasing2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/type_de_casing" />
+
+            <EditText
+                android:id="@+id/ETtypeDeCasing2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/numeroId2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/numero_id" />
+
+            <EditText
+                android:id="@+id/ETnumeroId2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/ReferenceProgergol2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/nef_progergol" />
+
+            <EditText
+                android:id="@+id/ETReferenceProgergol2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/dateFabrication2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/date_De_Fabrication" />
+
+            <EditText
+                android:id="@+id/ETdateFabrication2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+
+            <TextView
+                android:id="@+id/nimeroIdCp2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/numero_id_chargepro" />
+
+            <EditText
+                android:id="@+id/ETnimeroIdCp2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/masseMatiereActive2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/masse_de_matiere_active" />
+
+            <EditText
+                android:id="@+id/ETmasseMatiereActive2"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/Propulseur3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:ellipsize="none"
+                android:text="@string/propulseur3"
+                android:textSize="24sp"
+                app:fontFamily="serif" />
+
+            <TextView
+                android:id="@+id/ReferencePropulseur3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/reference_propulseur" />
+
+            <EditText
+                android:id="@+id/ETReferencePropulseur3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/typeDeCasing3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/type_de_casing" />
+
+            <EditText
+                android:id="@+id/ETtypeDeCasing3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/numeroId3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/numero_id" />
+
+            <EditText
+                android:id="@+id/ETnumeroId3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="100dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/ReferenceProgergol3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/nef_progergol" />
+
+            <EditText
+                android:id="@+id/ETReferenceProgergol3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/dateFabrication3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/date_De_Fabrication" />
+
+            <EditText
+                android:id="@+id/ETdateFabrication3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+
+            <TextView
+                android:id="@+id/nimeroIdCp3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/numero_id_chargepro" />
+
+            <EditText
+                android:id="@+id/ETnimeroIdCp3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/masseMatiereActive3"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/masse_de_matiere_active" />
+
+            <EditText
+                android:id="@+id/ETmasseMatiereActive3"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="90dp"
+                android:autofillHints=""
+                android:inputType="text"
+                tools:ignore="LabelFor" />
+
+
+            <TextView
+                android:id="@+id/impedanceInflammateur"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/impedance" />
+
+            <EditText
+                android:id="@+id/ETimpedanceInflammateur"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:inputType="phone"
+                tools:ignore="LabelFor" />
+
+            <TextView
+                android:id="@+id/impédanceLigne"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/impedanceLigne" />
+
+            <EditText
+                android:id="@+id/ETimpédanceLigne"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:autofillHints=""
+                android:inputType="phone"
+                tools:ignore="LabelFor" />
+
+
+            <TextView
+                android:id="@+id/DateHeureLancement"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/date_heure_lancement" />
+
+
+            <Button
+                android:id="@+id/btnLancement"
+                android:layout_width="185dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:text="@string/Mainteant" />
+
+
+            <TextView
+                android:id="@+id/qualitéDuVol"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/qualite" />
+
+
+            <Spinner
+                android:id="@+id/deroulanQualité"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Qualite"
+                android:state_activated="true" />
+
+            <TextView
+                android:id="@+id/Incident"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/incident" />
+
+
+            <Spinner
+                android:id="@+id/derouleIncident"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/Incident"
+                android:state_activated="true" />
+
+            <TextView
+                android:id="@+id/Commentaire"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/commentaire" />
+
+
+            <EditText
+                android:id="@+id/ETCommentaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:scrollbars="vertical" />
+
+            <Button
+                android:id="@+id/btnSyncro"
+                android:layout_width="185dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:text="@string/prendre_une_photo" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/premierephoto"
+                    app:layout_constraintVertical_bias="0.35"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/deuxiemephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/troisiemephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/quatriemephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cinqietephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/sixiemephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/septiemePhoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/huitiemephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/nueviemephoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/imgAfficherPhoto10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/dixiemePhoto"
+                    tools:srcCompat="@mipmap/ic_launcher" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/button"
+                android:contentDescription="TODO"
+                android:src="@android:drawable/ic_dialog_email" />
+
+            <Button
+                android:id="@+id/btnCreerQRcode"
+                android:layout_width="185dp"
+                android:layout_height="85dp"
+                android:layout_gravity="center"
+                android:text="@string/Creer_un_QR_Code" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
